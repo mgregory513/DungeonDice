@@ -16,9 +16,11 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view.
 	}
 	@IBAction func rollDicePress(_ sender: UIButton) {
-		print(sender.tag)
-		var diceRollNumber = 0
-		var diceType = 0
+		
+		var diceValue = sender.tag
+		
+		var diceRoll = Int.random(in: 1...diceValue)
+		diceLabel.text = "You rolled a \(sender.currentTitle!) die and got \(diceRoll)"
 		
 	}
 	
